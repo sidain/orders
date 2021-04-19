@@ -1,0 +1,6 @@
+{
+    "require": {
+        "shuchkin/simplexlsx": "^0.8.15",
+        "google/apiclient": "^2.4"
+    }
+}

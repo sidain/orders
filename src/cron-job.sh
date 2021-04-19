@@ -1,0 +1,4 @@
+curl -L  "https://drive.google.com/uc?export=download&id=1pUz_ytUhbJE5dLAv3AMq72wf4h7PKnq4" > /home/artisticcoatings/public_html/ac-orders/orders/ftpUploads/orders.xlsx
+curl -s "https://websiteneoinc.com/ac-orders/uploads/orders.xlsx" > /home/artisticcoatings/public_html/ac-orders/orders/uploads/orders.xlsx
+curl -s "https://websiteneoinc.com/ac-orders/uploads/orders.xlsx" > /home/artisticcoatings/public_html/ac-orders/orders/archive/orders_`date +%F_%I_%M`.xlsx
+curl -s "https://artisticcoatingsin.com/ac-orders/orders/src/ajax.php?action=fileProcess" > /home/artisticcoatings/public_html/ac-orders/orders/archive/orders_`date +%F_%I_%M`.log
