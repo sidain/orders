@@ -137,55 +137,12 @@
                     <nav class="navbar  bg-light navbar-expand-sm navbar-light fixed-top">
 
 
-                            
-                            <!--                             
-                            <a href="#" class="navbar-brand  ">
-                                <img src="https://artisticcoatingsin.com/wp-content/uploads/elementor/thumbs/artistic-coatings-logo-oo2lul4m0of7z1tqih7y3nknatwlf7i6dz4q6aee5u.png" alt="" height="30">
-                            
-                            </a> 
-                            -->
 
                             <a v-show="loggedIn != true" href="#" class="navbar-brand  ">
                                 <span>WELCOME</span>
                             
                             </a> 
 
-                                    
-                                <!--  
-                                <ul v-show="loginUserRole==='admin'"  class="navbar-nav  ">
-                                    <li v-show="loggedIn != true" class="nav-item">
-                                        <span v-on:click="createLoginClick1" class="nav-link">Create Login</span>
-                                    </li>
-                                    
-
-                                    
-                                    <li class="nav-item">
-                                        <span v-on:click="fileUploadClick1" class="nav-link">Upload</span>
-                                    </li>
-                                    
-
-                                    
-                                    
-                                    <li class="nav-item">
-                                        <span v-on:click="adminClick" class="nav-link">Admin</span>
-                                    </li>
-                                    
-                                    
-                                    
-                                    <li  v-show="loggedIn == true" class="nav-item">
-                                        <span v-on:click="getOrdersClick" class="nav-link">Orders</span>
-                                    </li>   
-                                    
-                                    
-                                    <li  v-show="loggedIn == true" class="nav-item ml-4">
-                                        <form class='fileUpload form-inline ' v-on:submit.prevent="function(){ ; }">    
-                                            
-                                            <button v-on:click="fileProcessClick" class='btn btn-sm btn-primary '>Process Upload File</button>
-                                        </form>
-                                    </li>
-
-                                </ul>
-                                -->
                             
                                 
 
@@ -203,18 +160,7 @@
                                         placeholder="Usernname">
                                     
                                     <div class="col form-row mr-0">
-                                        <!--  
-                                        <input 
-                                            v-on:focus="hidePopoverFocus" 
-                                            type="password" 
-                                            id="loginUsernamePassword" 
-                                            name="loginUsernamePassword" 
-                                            v-model="loginUsernamePassword" 
-                                            class='loginUsernamePassword form-control-sm col-7' 
-                                            data-toggle="password" 
-                                            data-size='sm' 
-                                            placeholder="Password">
-                                        -->
+        
 
                                         <input 
                                             v-on:focus="hidePopoverFocus" 
@@ -321,64 +267,7 @@
                 </div>
             </div>
           
-
-            
-            <!--  
-            <div class="row justify-content-center">
-                <div v-show="state === 'upload'" class="uploads card col-8 p-4">
-                    <h5 class="card-title">Uploads</h5>
-
-                    <form class='fileUpload ' v-on:submit.prevent="function(){ ; }">
-
-                        <div class="form-group form-row">
-
-                            <label class='col-sm-4 col-form-label' for="fileUserName">Username:</label>
-                            
-                            <input id='fileUserName' name='fileUserName' v-model="fileUserName" type="text" class="fileUserName form-control col" placeholder="Username">
-
-                        </div>
-                        
-
-                        <div class="form-group form-row">
-
-                            <label class="col-sm-4 col-form-label" for="fileUserPw">Password:</label>
-
-                            <input id='fileUserPw' name='fileUserPw'  v-model='fileUserPw' class='fileUserPw form-control col' type="text" placeholder="Password">
-
-                        </div>
-                                
-
-                        <div class="form-group form-row">
-
-                            <label class="col-sm-4 col-form-label" for="fileInput">File:</label>
-                            
-                            <input type="file" class="inputFile form-input col" id="fileInput" name="fileInput" >
-
-                        </div>
-
-                        
-                        
-                        <div class="row">
-                            <label class="col-sm-2" for="fileName">File:</label>
-
-                            <input id='fileName' name='fileName' v-model='fileName' class='inputFile form-control col-sm-4' type="text" value="./uploadedFiles/QB open orders.xlsx">
-                        </div>
-                        
-
-                        <div class="float-right">
-                            <button v-on:click="fileUploadClick2" class='btn btn-primary  '>Submit</button>                        
-
-                            <button v-on:click="fileProcessClick" class='btn btn-primary '>Process</button>
-                        </div>
-
-                    </form>
-                </div>
-            </div>
-            -->
-            
-          
-
-            
+     
             <div class="row">
                 <div v-show="loginUserRole === 'admin'" class="uploads card border col p-4">
                     <h5 class="card-title">Admin</h5>
@@ -477,180 +366,8 @@
                     </div>
 
                     
-
-                    <!--  
-                    <form class='fileUpload ' v-on:submit.prevent="function(){ ; }">
-
-                        <div class="form-group form-row">
-
-                            <label class='col-sm-4 col-form-label' for="fileUserName">Username:</label>
-                            
-                            <input id='fileUserName' name='fileUserName' v-model="fileUserName" type="text" class="fileUserName form-control col" placeholder="Username">
-
-                        </div>
-                        
-
-                        <div class="form-group form-row">
-
-                            <label class="col-sm-4 col-form-label" for="fileUserPw">Password:</label>
-
-                            <input id='fileUserPw' name='fileUserPw'  v-model='fileUserPw' class='fileUserPw form-control col' type="text" placeholder="Password">
-
-                        </div>
-                                
-
-                        <div class="form-group form-row">
-
-                            <label class="col-sm-4 col-form-label" for="fileInput">File:</label>
-                            
-                            <input type="file" class="inputFile form-input col" id="fileInput" name="fileInput" >
-
-                        </div>
-
-                        <div class="float-right">
-                            <button v-on:click="fileUploadClick2" class='btn btn-primary  '>Submit</button>                        
-
-                            <button v-on:click="fileProcessClick" class='btn btn-primary '>Process</button>
-                        </div>
-
-                    </form>
-                    -->
                 </div>
             </div>
-            
-            <!--  
-            <div class="row justify-content-center">
-                <div v-show="state === 'create'" class="users create card col-8 p-4">
-                    <h5 class="card-title">Users &gt; Create New User</h5>
-
-                    <form class='fileUpload ' v-on:submit.prevent="function(){ ; }">
-
-                        <div class="form-group form-row">
-
-                            <label class='col-sm-4' for="newUserName">Username:</label>
-                            
-                            <input id='newUserName' name='newUserName' v-model="newUserName" type="text" class="newUserName form-control col" placeholder="Username">
-
-                        </div>
-                        
-
-                        <div class="form-group form-row">
-
-                            <label class="col-sm-4" for="newUserPassword">Password:</label>
-
-                            <div class="col px-0">
-                                <input 
-                                    type="password" 
-                                    id='newUserPassword' 
-                                    name='newUserPassword'  
-                                    v-model='newUserPassword' 
-                                    data-toggle="password"  
-                                    class='newUserPassword form-control' 
-                                    placeholder="Password">
-                            </div>
-
-                        </div>
-                        
-
-                        <div class="form-group form-row">
-
-                            <label class="col-sm-4" for="newUserCompany">Company:</label>
-
-                            <input id='newUserCompany' name='newUserCompany'  v-model='newUserCompany' class='newUserCompany form-control col' type="text" placeholder="Company">
-
-                        </div>
-
-                        <div v-show='errorsCreateForm.length > 0' class="form-group form-row">
-                            <label class='col-sm-4'></label>
-
-                            <div class="errors col ">
-                                <div v-for="e in errorsCreateForm" class='alert alert-danger'>
-
-                                    <p>{{e.errorMsg}}</p>
-
-                                    <ul v-if="e.retVar === -2" >
-                                        <li v-for="company in e.errorValue">
-                                            <span v-on:click="newUserCompany = company; errorsCreateForm = ''; " class='error-company alert-link'>
-                                                {{company}}
-                                            </span>
-                                        </li>
-                                    </ul>
-                                    
-
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <button v-on:click="createLoginClick2" class='btn btn-primary float-right'>Submit</button>
-                    </form>
-                </div>
-            </div>
-            -->
-
-            <!--  
-            <div class="row">
-                <div v-show="state === 'login'" class="users login card col-6 p-4">
-                    <h5 class="card-title">Users &gt; User Login</h5>
-
-                    <form class='fileUpload ' v-on:submit.prevent="function(){ ; }">
-
-                        <div class="form-group form-row">
-
-                            <label class='col-sm-4' for="fileUserName">Username:</label>
-                            
-                            <input id='fileUserName' name='fileUserName' v-model="fileUserName" type="text" class="fileUserName form-control col" placeholder="Username">
-
-                        </div>
-                        
-
-                        <div class="form-group form-row">
-
-                            <label class="col-sm-4" for="fileUserPw">Password:</label>
-
-                            <input id='fileUserPw' name='fileUserPw'  v-model='fileUserPw' class='fileUserPw form-control col' type="text" placeholder="Password">
-
-                        </div>
-
-
-                        <button v-on:click="userLogin" class='btn btn-primary float-right'>Submit</button>
-                    </form>
-                </div>
-            </div>
-            -->
-
-            <!-- 
-            <div class="row">
-                <div v-show="state === 'forgot'" class="users forgot card col-6 p-4">
-                    <h5 class="card-title">Users &gt; User Forgot Password</h5>
-
-                    <form class='fileUpload ' v-on:submit.prevent="function(){ ; }">
-
-                        <div class="form-group form-row">
-
-                            <label class='col-sm-4' for="fileUserName">Username:</label>
-                            
-                            <input id='fileUserName' name='fileUserName' v-model="fileUserName" type="text" class="fileUserName form-control col" placeholder="Username">
-
-                        </div>
-                        
-
-                        <div class="form-group form-row">
-
-                            <label class="col-sm-4" for="fileUserPw">Password:</label>
-
-                            <input id='fileUserPw' name='fileUserPw'  v-model='fileUserPw' class='fileUserPw form-control col' type="text" placeholder="Password">
-
-                        </div>
-
-
-                        <button v-on:click="userLogin" class='btn btn-primary float-right'>Submit</button>
-                    </form>
-                </div>
-            </div>
-            -->
-            
 
             <div class="row justify-content-center">
                 <div class="orders card" v-show="orders.length > 0">
@@ -852,17 +569,6 @@
                             }
                         );
 
-                        // $('.loginUsername').focus();
-                        /*
-                        $('.loginUsername').popover(
-                            {
-                                content: "Username cannot be empty",
-                                placement: 'bottom',
-                                title: 'Error',
-                                template: '<div class="popover alert alert-danger" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body text-danger"></div></div>',
-                            }
-                        );
-                        */
 
                         $('.login-form').popover(
                             {
@@ -1001,105 +707,9 @@
 
                 },
 
-                /*
-                createLoginClick1: function(event){
-                    this.state = 'create';                        
-                },
-                */
+    
 
-                /*
-                createLoginClick2: function(event){
-                    submit = true;
-
-                    this.errorsCreateForm =[];
-
-
-
-                    if(this.newUserName.length < 1 ){
-                        //username empty
-                        this.errorsCreateForm.push(
-                            {
-                                retVar: -3,
-                                errorMsg: 'Username cannot be empty',
-                            }
-                        );
-
-                        $('.newUserName').focus();
-
-                        submit = false;
-                    }
-
-                    if(this.newUserPassword.length < 1 ){
-                        //username empty
-                        this.errorsCreateForm.push(
-                            {
-                                retVar: -3,
-                                errorMsg: 'Password cannot be empty',
-                            }
-                        );
-
-                        $('.newUserPassword').focus();
-
-                        submit = false;
-                    }
-
-                    if(this.newUserCompany.length < 1 ){
-                        //username empty
-                        this.errorsCreateForm.push(
-                            {
-                                retVar: -3,
-                                errorMsg: 'Company cannot be empty',
-                            }
-                        );
-
-                        $('.newUserCompany').focus();
-
-                        submit = false;
-                    }
-
-
-
-                    if( submit ){
-
-                        axios({
-                            method: 'post',
-                            url: this.ajaxFile,
-                            params:{
-                                action: 'userCreate',
-                                newusername: this.newUserName,
-                                newuserpassword: this.newUserPassword,
-                                newusercompany: this.newUserCompany,
-                            }
-                        })
-                        .then((response) => {
-                            console.log(response);
-
-                            d = response.data;
-
-                            if( d.retVar == true ){
-                                this.state = 'orders';
-                                this.loggedIn = true;
-                                this.loginUsername = d.username;
-                                this.loginUserCompany = d.company;
-                                this.getOrdersClick();
-                            }
-
-                            if( d.retVar == 2 ){
-                                // this.errorsCreateForm = [];
-                                this.errorsCreateForm.push( d );
-                            }
-
-                            if (d.retVar == -2) {
-                                // this.errorsCreateForm = [];
-                                this.errorsCreateForm.push( d );
-                            }
-
-                        }, (error) =>{
-                            console.log(error);
-                        });
-                    }
-                },
-                */
+       
 
                 createLoginClick3: function( cu ){
                     // cu= "#"+cu;
@@ -1112,9 +722,6 @@
                     u= document.getElementById(cu+'Username').value.trim();
                     p= document.getElementById(cu+'Password').value.trim();
 
-                    // pwMD5 = new Hashes.MD5().hex(p);
-
-                    
                     axios({
                             method: 'post',
                             url: this.ajaxFile,
@@ -1136,28 +743,6 @@
 
                                 $("tr."+cu).addClass("border border-success");
                             }
-
-
-                            /*
-
-                                if( d.retVar == true ){
-                                    this.state = 'orders';
-                                    this.loggedIn = true;
-                                    this.loginUsername = d.username;
-                                    this.loginUserCompany = d.company;
-                                    this.getOrdersClick();
-                                }
-
-                                if( d.retVar == 2 ){
-                                    // this.errorsCreateForm = [];
-                                    this.errorsCreateForm.push( d );
-                                }
-
-                                if (d.retVar == -2) {
-                                    // this.errorsCreateForm = [];
-                                    this.errorsCreateForm.push( d );
-                                }
-                            */
 
                         }, (error) =>{
                             console.log(error);
