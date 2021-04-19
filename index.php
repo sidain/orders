@@ -3,7 +3,7 @@
     
     // header("Access-Control-Allow-Origin: *");
 
-    //start session
+    //start session 
     session_start();
     // session_destroy();
 
